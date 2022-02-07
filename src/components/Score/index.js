@@ -1,17 +1,13 @@
-import React, { useContext } from 'react';
-import { ScoreContext } from '../../contexts/ScoreContext'
+import React, { useContext } from "react";
+import { ScoreContext } from "../../contexts/ScoreContext";
 
-import logo from '../../assets/logo.svg';
-
+import logo from "../../assets/logo.svg";
 
 function Score() {
-
-  const {score} = useContext(ScoreContext)
+  const { score } = useContext(ScoreContext);
 
   return (
-
-  <div className="flex w-[87%] p-3 m-10 mb-[70px] items-center justify-between border border-[#606e85] rounded-md">
-
+    <div className="flex w-[87%] p-3 m-10 mb-[70px] items-center justify-between border border-[#606e85] rounded-md">
       <div className="w-[100px]">
         <img src={logo} />
       </div>
@@ -20,10 +16,8 @@ function Score() {
         <h3 className="text-[#2A46C0] font-light">SCORE</h3>
         <h2 className="text-5xl font-extrabold text-[#3B4363]">{score}</h2>
       </div>
-
     </div>
-
-  )
+  );
 }
 
 export default Score;
