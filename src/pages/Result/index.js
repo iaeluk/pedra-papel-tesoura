@@ -1,7 +1,9 @@
 import React, { useContext, useEffect } from "react";
 
 import { ScoreContext } from "../../contexts/ScoreContext";
-import Rules from "../Rules";
+import ChosenModel from "../../components/ChosenModel";
+
+import RulesButton from "../../components/RulesButton";
 
 import iconPaper from "../../assets/icon-paper.svg";
 import iconRock from "../../assets/icon-rock.svg";
@@ -33,29 +35,29 @@ function Result() {
   switch (choices[0]) {
     case "pedra":
       userIcon = iconRock;
-      userBgColor = "bg-red-600";
+      userBgColor = "from-[#dc2e4e] to-[#dd405d]";
       break;
     case "papel":
       userIcon = iconPaper;
-      userBgColor = "bg-blue-500";
+      userBgColor = "from-[#4865f4] to-[#5671f5]";
       break;
     case "tesoura":
       userIcon = iconScissors;
-      userBgColor = "bg-yellow-500";
+      userBgColor = "from-[#ec9e0e] to-[#eca922]";
   }
 
   switch (choices[1]) {
     case "pedra":
       computerIcon = iconRock;
-      computerBgColor = "bg-red-600";
+      computerBgColor = "from-[#dc2e4e] to-[#dd405d]";
       break;
     case "papel":
       computerIcon = iconPaper;
-      computerBgColor = "bg-blue-500";
+      computerBgColor = "from-[#4865f4] to-[#5671f5]";
       break;
     case "tesoura":
       computerIcon = iconScissors;
-      computerBgColor = "bg-yellow-500";
+      computerBgColor = "from-[#ec9e0e] to-[#eca922]";
   }
 
   return (
@@ -63,24 +65,12 @@ function Result() {
       <div className="text-white flex flex-col items-center space-y-20">
         <div className="flex space-x-16">
           <div className="flex flex-col items-center">
-            <div
-              className={`${userBgColor} mb-3 w-[130px] h-[130px] rounded-full flex items-center justify-center cursor-pointer`}
-            >
-              <div className="bg-white w-[100px] h-[100px] rounded-full flex items-center justify-center">
-                <img src={userIcon} />
-              </div>
-            </div>
+            <ChosenModel bgColor={userBgColor} icon={userIcon} />
             <p className="font-semibold">YOU PICKED</p>
           </div>
 
           <div className="flex flex-col items-center">
-            <div
-              className={`${computerBgColor} mb-3 w-[130px] h-[130px] rounded-full flex items-center justify-center cursor-pointer`}
-            >
-              <div className="bg-white w-[100px] h-[100px] rounded-full flex items-center justify-center">
-                <img src={computerIcon} />
-              </div>
-            </div>
+          <ChosenModel bgColor={computerBgColor} icon={computerIcon} />
             <p className="font-semibold">THE HOUSE PICKED</p>
           </div>
         </div>
@@ -99,7 +89,7 @@ function Result() {
         </div>
       </div>
 
-      <Rules />
+      <RulesButton />
     </div>
   );
 }

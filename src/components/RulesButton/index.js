@@ -1,6 +1,8 @@
 import React from "react";
 
-function Rules() {
+import Rules from "../../pages/Rules";
+
+function RulesButton() {
   return (
     <div className="mt-16 border border-[#606e85] rounded-lg  w-[120px] h-[43px] flex items-center justify-center">
       <button
@@ -17,4 +19,4 @@ function Rules() {
   );
 }
 
-export default Rules;
+export default RulesButton;

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { ScoreContext } from "../../contexts/ScoreContext";
-import Result from "../Result";
+import Result from "../../pages/Result";
+
 import ComputerChoice from "./computerChoice";
 import UserChoice from "./userChoice";
 
@@ -14,6 +15,7 @@ function ScoreLogic() {
         break;
       case "pedrapapel":
         setMensagem("YOU LOSE");
+        setScore(score - 1);
         break;
       case "pedratesoura":
         setMensagem("YOU WIN");
@@ -28,9 +30,11 @@ function ScoreLogic() {
         break;
       case "papeltesoura":
         setMensagem("YOU LOSE");
+        setScore(score - 1);
         break;
       case "tesourapedra":
         setMensagem("YOU LOSE");
+        setScore(score - 1);
         break;
       case "tesourapapel":
         setMensagem("YOU WIN");
@@ -52,6 +56,7 @@ function ScoreLogic() {
       ) : (
         <Result />
       )}
+
     </>
   );
 }
