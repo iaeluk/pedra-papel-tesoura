@@ -13,7 +13,7 @@ function RulesButton() {
         }}
         className="text-gray-300 text-lg"
       >
-        RULES
+        REGRAS
       </button>
     </div>
   );

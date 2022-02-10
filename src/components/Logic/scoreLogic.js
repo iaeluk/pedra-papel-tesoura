@@ -11,37 +11,37 @@ function ScoreLogic() {
   useEffect(() => {
     switch (allChoices) {
       case "pedrapedra":
-        setMensagem("DRAW");
+        setMensagem("EMPATE");
         break;
       case "pedrapapel":
-        setMensagem("YOU LOSE");
+        setMensagem("PERDEU");
         setScore(score - 1);
         break;
       case "pedratesoura":
-        setMensagem("YOU WIN");
+        setMensagem("GANHOU");
         setScore(score + 1);
         break;
       case "papelpedra":
-        setMensagem("YOU WIN");
+        setMensagem("GANHOU");
         setScore(score + 1);
         break;
       case "papelpapel":
-        setMensagem("DRAW");
+        setMensagem("EMPATE");
         break;
       case "papeltesoura":
-        setMensagem("YOU LOSE");
+        setMensagem("PERDEU");
         setScore(score - 1);
         break;
       case "tesourapedra":
-        setMensagem("YOU LOSE");
+        setMensagem("PERDEU");
         setScore(score - 1);
         break;
       case "tesourapapel":
-        setMensagem("YOU WIN");
+        setMensagem("GANHOU");
         setScore(score + 1);
         break;
       case "tesouratesoura":
-        setMensagem("DRAW");
+        setMensagem("EMPATE");
         break;
     }
   }, [allChoices]);

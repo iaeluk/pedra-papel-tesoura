@@ -4,7 +4,7 @@ import ScoreLogic from "../../components/Logic/scoreLogic";
 
 function Home() {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center">
+    <div className="h-screen w-full flex flex-col items-center">
       <Score />
       <ScoreLogic />
     </div>

@@ -62,16 +62,16 @@ function Result() {
 
   return (
     <div className="flex flex-col items-center space-y-[79px]">
-      <div className="text-white flex flex-col items-center space-y-20">
+      <div className="text-white flex flex-col items-center space-y-20 mb-[3px]">
         <div className="flex space-x-16">
           <div className="flex flex-col items-center">
             <ChosenModel bgColor={userBgColor} icon={userIcon} />
-            <p className="font-semibold">YOU PICKED</p>
+            <p className="font-semibold">VOCÊ ESCOLHEU</p>
           </div>
 
           <div className="flex flex-col items-center">
           <ChosenModel bgColor={computerBgColor} icon={computerIcon} />
-            <p className="font-semibold">THE HOUSE PICKED</p>
+            <p className="font-semibold">A CASA ESCOLHEU</p>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ function Result() {
               newGame();
             }}
           >
-            PLAY AGAIN
+            JOGAR NOVAMENTE
           </button>
         </div>
       </div>

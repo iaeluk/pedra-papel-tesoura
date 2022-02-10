@@ -12,3 +12,10 @@ body {
   );
   font-family: "Barlow Semi Condensed", sans-serif;
 }
+
+.bg-img {
+  background-image: url('../src/assets/bg-triangle.svg');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
