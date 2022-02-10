@@ -1,10 +1,6 @@
 import React, { useContext, useEffect } from "react";
-
 import { ScoreContext } from "../../contexts/ScoreContext";
 import ChosenModel from "../../components/ChosenModel";
-
-import RulesButton from "../../components/RulesButton";
-
 import iconPaper from "../../assets/icon-paper.svg";
 import iconRock from "../../assets/icon-rock.svg";
 import iconScissors from "../../assets/icon-scissors.svg";
@@ -89,7 +85,6 @@ function Result() {
         </div>
       </div>
 
-      <RulesButton />
     </div>
   );
 }

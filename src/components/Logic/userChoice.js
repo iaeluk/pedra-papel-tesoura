@@ -19,7 +19,7 @@ function UserChoice() {
         <ChosenModel chosen="pedra" bgColor="from-[#dc2e4e] to-[#dd405d]" icon={iconRock} />
       </div>
       
-      <Rules />
+      {/* <Rules /> */}
     </div>
   );
 }
