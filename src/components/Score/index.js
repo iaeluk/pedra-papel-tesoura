@@ -7,7 +7,7 @@ function Score() {
   const { score } = useContext(ScoreContext);
 
   return (
-    <div className="flex w-[87%] p-3 m-10 mb-[70px] items-center justify-between border border-[#606e85] rounded-md">
+    <div className="flex w-[87%] p-3 m-10 mb-[120px] items-center justify-between border border-[#606e85] rounded-md">
       <div className="w-[100px]">
         <img src={logo} />
       </div>
